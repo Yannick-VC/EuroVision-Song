@@ -1,12 +1,14 @@
 body {
     background: $bg-gradient;
     color: $primary-white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     width: 100vw;
     height: 100vh;
     margin: 0;
 }
 
+//Get ranking data in the middle with FlexBox Children items
 .center {
   width: 100vw;
   height: auto;
@@ -17,15 +19,17 @@ body {
   flex-direction: column;
 }
 
-
+//H1 styling
 h1 {
     text-align: center;
     font-size: $font-size-large;
-    background: -webkit-linear-gradient(#a1c4fd, #c2e9fb);
+    background: $text-gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+
+//CSS for the fancy button from this codepen: https://codepen.io/jh3y/pen/PoGbxLp
 .cybr-btn {
     --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 1%));
     --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 50%);

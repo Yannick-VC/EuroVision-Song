@@ -1,5 +1,11 @@
 table, th, td {
-    border: 1px solid $primary-gray;
+    border: solid black;
+    border-collapse: collapse;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
+    padding: 0.7rem;
+}
+
+th {
+    background-color: black;
 }
