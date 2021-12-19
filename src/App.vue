@@ -1,28 +1,56 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- Homepagina -->
+    <Homepage
+      v-if="page == 'home'"
+
+      @change-page="goToPage"
+    />
+
+    <!-- Game -->
+    <Gamepage
+      v-if="page == 'game'"
+
+      @change-page="goToPage"
+    />
+
+    <!-- Ranking -->
+    <Rankingpage
+      v-if="page == 'ranking'"
+
+      @change-page="goToPage"
+    />
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  // Pages
+  import Homepage from "./pages/Homepage.vue";
+  import Gamepage from "./pages/Gamepage.vue";
+  import Rankingpage from "./pages/Rankingpage.vue";
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  // App component
+  export default {
+    name: 'App',
+    components: {
+      Homepage,
+      Gamepage,
+      Rankingpage
+    },
+    data() {
+      return {
+        page: "game"
+      }
+    },
+    methods: {
+      goToPage(page) {
+        this.page = page;
+      }
+    }
   }
-}
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import "./scss/style.scss";
 </style>
