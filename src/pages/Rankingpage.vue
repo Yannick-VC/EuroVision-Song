@@ -1,7 +1,10 @@
 <template>
     <div>
-        <button @click="goToPage('home')">
-            Go to home
+
+        <button class="cybr-btn" @click="goToPage('home')">
+        Go home<span aria-hidden>_</span>
+        <span aria-hidden class="cybr-btn__glitch">Go home</span>
+        <span aria-hidden class="cybr-btn__tag">#1</span>
         </button>
         <h1>
             Ranking
