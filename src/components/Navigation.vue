@@ -21,11 +21,6 @@
                     linkText: "Home",
                     linkUrl: "/home",
                     target: "_blank"
-                },
-                {
-                    linkText: "Shop",
-                    linkUrl: "/webshop",
-                    target: "_self"
                 }
             ]
         }
