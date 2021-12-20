@@ -6,6 +6,9 @@ body {
     width: 100vw;
     height: 100vh;
     margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+
 }
 
 //Get ranking data in the middle with FlexBox Children items
@@ -68,6 +71,7 @@ h1 {
     transition: background 0.2s;
     margin-top: 2rem;
     margin-left: 2rem;
+
   }
   
   .cybr-btn:hover {
