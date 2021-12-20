@@ -9,15 +9,16 @@
     <!-- FlexBox div  -->
     <div class="center">
       <!-- H1  -->
-      <h1>Ranking</h1>
+      <h1>Ranking for </h1>
       <!-- Table -->
       <table>
         <tr>
           <!-- Table headers -->
-          <th>Ranking</th>
+          <th>Ranking for</th>
           <th>Song Title</th>
           <th>Song Artist</th>
-          <th>Total Points</th>
+          <th>Points</th>
+          <th>Out of</th>
           <th>% of Total</th>
           <th>Spotify Refference</th>
         </tr>
@@ -30,6 +31,7 @@
           <td>{{ song.title }}</td>
           <td>{{ song.artist }}</td>
           <td>{{ song.totalPoints }}</td>
+          <td>{{ song.allPoints }} </td>
           <td>{{ song.percentage }}%</td>
           <!-- Fetch spotify song -->
           <td>
@@ -120,16 +122,23 @@ export default {
                   allPoints += element.points;
                 }
               });
+            
             //Return song with all new data added
             return song;
           });
 
-          //Calculate for each song the % of votes it holds compared to the previously calculated total
+          //Calculate for each song the % of votes it holds compared to the previously calculated total & calculate total amount of votes
+          let fullTotal = 0;
           songs.forEach((song) => {
             song.percentage = Number(
               ((song.totalPoints / allPoints) * 100).toFixed(2)
             );
+            fullTotal += song.totalPoints
           });
+
+          songs.forEach((song) => {
+            song.allPoints = fullTotal
+          })
 
           //Get the correct ranking for the songs with all correct data
           this.songs = songs.sort((y, z) => z.totalPoints - y.totalPoints);

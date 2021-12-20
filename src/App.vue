@@ -40,7 +40,7 @@
     },
     data() {
       return {
-        page: "game"
+        page: "ranking"
       }
     },
     methods: {
