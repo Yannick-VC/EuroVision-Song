@@ -9,14 +9,14 @@
     <!-- FlexBox div  -->
     <div class="center">
       <!-- H1  -->
-      <h1>Ranking for </h1>
+      <h1>Ranking for</h1>
       <!-- Table -->
       <table>
         <tr>
           <!-- Table headers -->
           <th>Ranking for</th>
-          <th>Song Title</th>
-          <th>Song Artist</th>
+          <th>Title</th>
+          <th>Artist</th>
           <th>Points</th>
           <th>Out of</th>
           <th>% of Total</th>
@@ -31,7 +31,7 @@
           <td>{{ song.title }}</td>
           <td>{{ song.artist }}</td>
           <td>{{ song.totalPoints }}</td>
-          <td>{{ song.allPoints }} </td>
+          <td>{{ song.allPoints }}</td>
           <td>{{ song.percentage }}%</td>
           <!-- Fetch spotify song -->
           <td>
