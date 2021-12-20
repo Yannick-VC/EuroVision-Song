@@ -136,6 +136,7 @@ export default {
             fullTotal += song.totalPoints
           });
 
+          //Set the full total to each song as a property
           songs.forEach((song) => {
             song.allPoints = fullTotal
           })
